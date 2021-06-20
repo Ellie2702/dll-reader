@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/dll-reader/v16/Server/sqlite3
+/.vs/dll-reader/v16
+/dll-reader/bin/Debug
+/dll-reader/obj/Debug

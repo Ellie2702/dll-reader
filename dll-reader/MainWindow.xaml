@@ -1,0 +1,35 @@
+﻿<Window x:Class="dll_reader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dll_reader"
+        mc:Ignorable="d"
+        Title="DLL Reader" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Выберите путь к папке с файлами:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="15"/>
+        <TextBox Grid.Column="1" Margin="10,35" Name="path" />
+        <Button Grid.Column="2" Width="40" Height="25" Content="..." FontSize="15" HorizontalAlignment="Left" Margin="15" Click="Button_Click"/>
+        <Button Grid.Column="2" Width="180" Height="25" Content="Прочитать директорию" FontSize="15" HorizontalAlignment="Right" Margin="15" Click="Button_Click_1"/>
+
+        <TreeView Grid.Row="1" Grid.ColumnSpan="3" Margin="10" Name="treeView">
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="IsExpanded" Value="True" />
+                </Style>
+            </TreeView.ItemContainerStyle>
+        </TreeView>
+
+    </Grid>
+</Window>
